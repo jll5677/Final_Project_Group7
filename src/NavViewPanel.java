@@ -77,5 +77,6 @@ public class NavViewPanel extends JPanel{
     {
         remove(splash);
     }
-            
+
+          
 }
