@@ -81,6 +81,18 @@ public class NavViewPanel extends JPanel{
             remove(this.m_view);
     }    
     
+    public void removeInstruction()
+    {
+        if (this.i_view != null)
+            remove(this.i_view);
+    }
+    
+    public void removeCredits()
+    {
+        if (this.c_view != null)
+            remove(this.c_view);
+    }
+    
     public void removeSplash()
     {
         remove(splash);

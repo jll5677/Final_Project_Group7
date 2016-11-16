@@ -31,6 +31,8 @@ public class NavView extends JFrame{
     {
         nVpanel.removeSplash();
         nVpanel.removeMain();
+        nVpanel.removeInstruction();
+        nVpanel.removeCredits();
         nVpanel.addOptions(o_view);        
     }
     
@@ -38,7 +40,27 @@ public class NavView extends JFrame{
     {
         nVpanel.removeSplash();
         nVpanel.removeOptions();
+        nVpanel.removeInstruction();
+        nVpanel.removeCredits();
         nVpanel.addMain(m_view);        
+    }
+    
+    public void switchToInstructionPanel(InstructionView i_view)
+    {
+        nVpanel.removeSplash();
+        nVpanel.removeMain();
+        nVpanel.removeOptions();
+        nVpanel.removeCredits();
+        nVpanel.addInstruction(i_view); 
+    }
+    
+    public void switchToCreditsPanel(CreditsView c_view)
+    {
+        nVpanel.removeSplash();
+        nVpanel.removeMain();
+        nVpanel.removeOptions();
+        nVpanel.removeInstruction();
+        nVpanel.addCredits(c_view); 
     }
     
     
