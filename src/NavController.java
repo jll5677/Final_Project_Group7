@@ -15,6 +15,7 @@ public class NavController {
     NavModel n_model;
     NavView n_view;
     
+    
     //Instance Variables for Options Model, View, and Controller
     OptionsModel o_model;
     OptionsView o_view;
@@ -63,7 +64,7 @@ public class NavController {
     class CreditButtonListener implements ActionListener {
         public void actionPerformed(ActionEvent e)
         {
-            
+            n_view.switchToCreditsPanel(c_view);
         }
     }
     
