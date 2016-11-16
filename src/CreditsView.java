@@ -8,6 +8,10 @@
  *
  * @author jll5677
  */
-public class CreditsView {
+public class CreditsView extends JPanel{
+    CreditsView()
+    {
+        
+    }
     
 }

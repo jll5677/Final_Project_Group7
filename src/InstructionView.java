@@ -8,6 +8,8 @@
  *
  * @author jll5677
  */
-public class InstructionView {
-    
+public class InstructionView extends JPanel{
+    InstructionView(){
+        
+    }
 }
