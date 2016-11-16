@@ -50,5 +50,12 @@ public class OptionsView extends JPanel{
             add(greenButton_P1);
             add(player1Set);
             add(player1InfoLabel);
+            
+            add(player2NameField);
+            add(redButton_P2);
+            add(blueButton_P2);
+            add(greenButton_P2);
+            add(player2Set);
+            add(player2InfoLabel);
         }
 }
