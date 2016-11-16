@@ -23,7 +23,12 @@ public class CreditsView extends JPanel{
     
     CreditsView()
     {
-      credit1 = new JTextField("Cody Farrell")  
+      credit1 = new JTextField("Cody Farrell");
+      credit2 = new JTextField("Jian Li");
+      credit3 = new JTextField("Daniel Backer");
+      add(credit1);
+      add(credit2);
+      add(credit3);
     }
 
     
