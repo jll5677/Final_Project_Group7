@@ -13,6 +13,8 @@ public class NavViewPanel extends JPanel{
     
     OptionsView o_view;
     MainView m_view;
+    InstructionView i_view;
+    CreditsView c_view;
     
     public NavViewPanel() {
         super();
@@ -42,6 +44,14 @@ public class NavViewPanel extends JPanel{
         revalidate();
         repaint();
     }    
+    
+    public void addInstruction(InstructionView i_view)
+    {
+        this.i_view = i_view;
+        add(i_view, BorderLayout.CENTER);
+        revalidate();
+        repaint();
+    }
     
     public void addSplash(NavView n_view)
     {
