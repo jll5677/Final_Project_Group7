@@ -47,6 +47,12 @@ public class OptionsController {
                 }
             }
         }
+        o_view.addP1RedButtonListener(new ButtonListener());
+        o_view.addP2RedButtonListener(new ButtonListener());
+        o_view.addP1BlueButtonListener(new ButtonListener());
+        o_view.addP2BlueButtonListener(new ButtonListener());
+        o_view.addP1GreenButtonListener(new ButtonListener());
+        o_view.addP2GreenButtonListener(new ButtonListener());
     }
     
 }

@@ -1,4 +1,5 @@
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -50,5 +51,31 @@ public class OptionsView extends JPanel{
             add(blueButton_P2);
             add(greenButton_P2);
             add(player2InfoLabel);
+        }
+        
+        public void addP1RedButtonListener(ActionListener alR1) {
+            redButton_P1.addActionListener(alR1);
+        }
+        public void addP2RedButtonListener(ActionListener alR2) {
+            redButton_P2.addActionListener(alR2);
+        }
+        public void addP1BlueButtonListener(ActionListener alB1) {
+            blueButton_P1.addActionListener(alB1);
+        }
+        public void addP2BlueButtonListener(ActionListener alB2) {
+            blueButton_P2.addActionListener(alB2);
+        }
+        public void addP1GreenButtonListener(ActionListener alG1) {
+            greenButton_P1.addActionListener(alG1);
+        }
+        public void addP2GreenButtonListener(ActionListener alG2) {
+            greenButton_P2.addActionListener(alG2);
+        }
+        
+        public void setPlayer1Name() {
+            o_model.setPlayer1Name(player1NameField.getText());
+        }
+        public void setPlayer2Name() {
+            o_model.setPlayer2Name(player2NameField.getText());
         }
 }
