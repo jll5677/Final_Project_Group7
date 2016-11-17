@@ -23,6 +23,8 @@ public class NavController {
            
     // TODO: Create instances of your MainModel and MainController once you implement them
     MainView m_view;
+    InstructionView i_view;
+    CreditsView c_view;
     
     public NavController(NavModel n_model, NavView n_view ) {
         this.n_model = n_model;
@@ -33,9 +35,13 @@ public class NavController {
         o_Controller = new OptionsController(o_model, o_view); 
         
         m_view = new MainView();
+        i_view = new InstructionView();
+        c_view = new CreditsView();
                 
         n_view.addOptionsButtonListener(new OptionsButtonListener());
-        n_view.addMainButtonListener(new MainButtonListener());        
+        n_view.addMainButtonListener(new MainButtonListener()); 
+        n_view.addInstructionButtonListener(new InstructionButtonListener());
+        n_view.addCreditsButtonListener(new CreditsButtonListener());
         
     }
     class OptionsButtonListener implements ActionListener {            
@@ -57,17 +63,17 @@ public class NavController {
     class InstructionButtonListener implements ActionListener {
         public void actionPerformed(ActionEvent e)
         {
-            
-        }
-    }         
-    
-    class CreditButtonListener implements ActionListener {
+            n_view.switchToInstructionPanel(i_view);
+        }         
+    }
+    class CreditsButtonListener implements ActionListener {
         public void actionPerformed(ActionEvent e)
         {
             n_view.switchToCreditsPanel(c_view);
         }
     }
+}
     
     //TODO: Add listeners on buttons to switch to other Panels
     
-}
+   
