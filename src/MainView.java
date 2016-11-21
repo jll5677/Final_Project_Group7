@@ -1,5 +1,4 @@
 
-import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -10,9 +9,19 @@ import javax.swing.JPanel;
  * @author jrimland
  */
 public class MainView extends JPanel{
+    private String player1Name;
+    private String player1Color;
+    private String player2Name;
+    private String player2Color;
+    
     MainView()
     {
-        JLabel welcomeButton = new JLabel("Welcome to the Main View!");
-        add(welcomeButton);
+        JLabel welcomeLabel = new JLabel("Welcome to the Main View!");
+        JLabel player1TempLabel = new JLabel("NAME: " + player1Name + "COLOR: " + player1Color);
+        JLabel player2TempLabel = new JLabel("NAME: " + player2Name + "COLOR: " + player2Color);
+        
+        add(welcomeLabel);
+        add(player1TempLabel);
+        add(player2TempLabel);
     }
 }
