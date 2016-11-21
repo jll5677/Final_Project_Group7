@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -27,5 +28,39 @@ public class MainView extends JPanel{
     
     public String getPlayer1Name(OptionsModel o_model) {
         return o_model.getPlayer1Name();
+    }
+    public String getPlayer2Name(OptionsModel o_model) {
+        return o_model.getPlayer2Name();
+    }
+    public String getPlayer1Color(OptionsModel o_model) {
+        Color color = o_model.getPlayer1Color();
+        
+        if(color == Color.RED) {
+            player1Color = "Red";
+        }
+        if(color == Color.BLUE) {
+            player1Color = "Blue";
+        }
+        if(color == Color.GREEN) {
+            player1Color = "Green";
+        }
+        
+        return player1Color;
+    }
+    
+    public String getPlayer2Color(OptionsModel o_model) {
+        Color color = o_model.getPlayer2Color();
+        
+        if(color == Color.RED) {
+            player2Color = "Red";
+        }
+        if(color == Color.BLUE) {
+            player2Color = "Blue";
+        }
+        if(color == Color.GREEN) {
+            player2Color = "Green";
+        }
+        
+        return player2Color;
     }
 }
