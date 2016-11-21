@@ -24,4 +24,8 @@ public class MainView extends JPanel{
         add(player1TempLabel);
         add(player2TempLabel);
     }
+    
+    public String getPlayer1Name(OptionsModel o_model) {
+        return o_model.getPlayer1Name();
+    }
 }
