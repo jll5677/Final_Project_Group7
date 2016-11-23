@@ -27,8 +27,8 @@ public class MainView extends JPanel{
         player2Name = o_model.getPlayer2Name();
         
         JLabel welcomeLabel = new JLabel("Welcome to the Main View!");
-        JLabel player1TempLabel = new JLabel("NAME: " + player1Name + " COLOR: " + player1Color);
-        JLabel player2TempLabel = new JLabel("NAME: " + player2Name + " COLOR: " + player2Color);
+        JLabel player1TempLabel = new JLabel("PLAYER 1   NAME: " + player1Name + " COLOR: " + player1Color);
+        JLabel player2TempLabel = new JLabel("PLAYER 2   NAME: " + player2Name + " COLOR: " + player2Color);
         
         add(welcomeLabel);
         add(player1TempLabel);
