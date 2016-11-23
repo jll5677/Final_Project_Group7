@@ -18,11 +18,13 @@ public class OptionsController {
     
     OptionsModel o_model;
     OptionsView o_view;
+    MainView m_view;
     
-    OptionsController(final OptionsModel o_model, final OptionsView o_view)
+    OptionsController(final OptionsModel o_model, final OptionsView o_view, final MainView m_view)
     {
         this.o_model = o_model;
         this.o_view = o_view;
+        this.m_view = m_view;
         
         class ButtonListener implements ActionListener {
             public void actionPerformed(ActionEvent e) {
@@ -45,6 +47,15 @@ public class OptionsController {
                 if(clickSource == o_view.greenButton_P2) {
                     o_model.setPlayer1Color(Color.GREEN);
                 }
+                if(clickSource == o_view.updatePlayer1InfoButton) {
+                    o_model.setPlayer1Name(o_view.player1NameField.getText());
+                    o_view.player1InfoLabel.setText("" + o_model.getPlayer1Name() + " is ready to play!");
+                    
+                }
+                if(clickSource == o_view.updatePlayer2InfoButton) {
+                    o_model.setPlayer2Name(o_view.player2NameField.getText());
+                    o_view.player2InfoLabel.setText("" + o_model.getPlayer2Name() + " is ready to play!");
+                }
             }
         }
         o_view.addP1RedButtonListener(new ButtonListener());
@@ -53,6 +64,8 @@ public class OptionsController {
         o_view.addP2BlueButtonListener(new ButtonListener());
         o_view.addP1GreenButtonListener(new ButtonListener());
         o_view.addP2GreenButtonListener(new ButtonListener());
+        o_view.addUpdatePlayer1InfoButtonButtonListener(new ButtonListener());
+        o_view.addUpdatePlayer2InfoButtonButtonListener(new ButtonListener());
     }
     
 }
