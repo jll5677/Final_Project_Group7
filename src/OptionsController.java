@@ -24,6 +24,8 @@ public class OptionsController {
         this.o_model = o_model;
         this.o_view = o_view;
         
+        MainView m_view = new MainView();
+        
         class ButtonListener implements ActionListener {
             public void actionPerformed(ActionEvent e) {
                 JButton clickSource = (JButton)e.getSource();
