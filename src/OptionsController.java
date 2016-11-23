@@ -27,23 +27,23 @@ public class OptionsController {
         class ButtonListener implements ActionListener {
             public void actionPerformed(ActionEvent e) {
                 JButton clickSource = (JButton)e.getSource();
-                if(clickSource == o_view.redButton_P1) {
+                if(clickSource == o_view.redButton) {
                     o_model.setPlayer1Color(Color.RED);
                 }
-                if(clickSource == o_view.redButton_P2) {
-                    o_model.setPlayer1Color(Color.RED);
+                if(clickSource == o_view.orangeButton) {
+                    o_model.setPlayer2Color(Color.ORANGE);
                 }
-                if(clickSource == o_view.blueButton_P1) {
+                if(clickSource == o_view.yellowButton) {
+                    o_model.setPlayer1Color(Color.YELLOW);
+                }
+                if(clickSource == o_view.greenButton) {
+                    o_model.setPlayer2Color(Color.GREEN);
+                }
+                if(clickSource == o_view.blueButton) {
                     o_model.setPlayer1Color(Color.BLUE);
                 }
-                if(clickSource == o_view.blueButton_P2) {
-                    o_model.setPlayer1Color(Color.BLUE);
-                }
-                if(clickSource == o_view.greenButton_P1) {
-                    o_model.setPlayer1Color(Color.GREEN);
-                }
-                if(clickSource == o_view.greenButton_P2) {
-                    o_model.setPlayer1Color(Color.GREEN);
+                if(clickSource == o_view.magentaButton) {
+                    o_model.setPlayer2Color(Color.MAGENTA);
                 }
                 if(clickSource == o_view.updatePlayer1InfoButton) {
                     o_model.setPlayer1Name(o_view.player1NameField.getText());
