@@ -1,5 +1,3 @@
-
-import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -23,8 +21,6 @@ public class MainView extends JPanel{
     {
         GridLayout grid = new GridLayout(5,1);
         setLayout(grid);
-        
-        OptionsModel o_model = new OptionsModel();
         
         welcomeLabel = new JLabel("Welcome to Box Jump!");
         player1TempLabel = new JLabel("No info yet.");
