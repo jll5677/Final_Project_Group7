@@ -62,8 +62,8 @@ public class OptionsView extends JPanel{
             add(blueButton);
             add(magentaButton);
             add(savePlayer1InfoButton);
-            add(showPlayer1InfoButton);
             add(savePlayer2InfoButton);
+            add(showPlayer1InfoButton);
             add(showPlayer2InfoButton);
             add(player1InfoLabel);
             add(player2InfoLabel);
