@@ -24,8 +24,8 @@ public class OptionsView extends JPanel{
         JLabel player1InfoLabel;
         JLabel player2InfoLabel;
         
-        JButton updatePlayer1InfoButton;
-        JButton updatePlayer2InfoButton;
+        JButton showPlayer1InfoButton;
+        JButton showPlayer2InfoButton;
         
         OptionsModel o_model;
         
@@ -44,8 +44,8 @@ public class OptionsView extends JPanel{
             
             player1InfoLabel = new JLabel("No Info Yet");
             player2InfoLabel = new JLabel("No Info Yet");
-            updatePlayer1InfoButton = new JButton("Update Player 1 Info");
-            updatePlayer2InfoButton = new JButton("Update Player 2 Info");
+            showPlayer1InfoButton = new JButton("Show Player 1 Info");
+            showPlayer2InfoButton = new JButton("Show Player 2 Info");
             
             GridLayout grid = new GridLayout(6,2);
             setLayout(grid);
@@ -58,8 +58,8 @@ public class OptionsView extends JPanel{
             add(greenButton);
             add(blueButton);
             add(magentaButton);
-            add(updatePlayer1InfoButton);
-            add(updatePlayer2InfoButton);
+            add(showPlayer1InfoButton);
+            add(showPlayer2InfoButton);
             add(player1InfoLabel);
             add(player2InfoLabel);
         }
@@ -82,10 +82,10 @@ public class OptionsView extends JPanel{
         public void addMagentaButtonListener(ActionListener alM) {
             magentaButton.addActionListener(alM);
         }
-        public void addUpdatePlayer1InfoButtonButtonListener(ActionListener alP1Info) {
-            updatePlayer1InfoButton.addActionListener(alP1Info);
+        public void addShowPlayer1InfoButtonButtonListener(ActionListener alP1Info) {
+            showPlayer1InfoButton.addActionListener(alP1Info);
         }
-        public void addUpdatePlayer2InfoButtonButtonListener(ActionListener alP2Info) {
-            updatePlayer2InfoButton.addActionListener(alP2Info);
+        public void addShowPlayer2InfoButtonButtonListener(ActionListener alP2Info) {
+            showPlayer2InfoButton.addActionListener(alP2Info);
         }
 }
