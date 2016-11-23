@@ -14,12 +14,12 @@ public class OptionsView extends JPanel{
         JTextField player1NameField;
         JTextField player2NameField;
     
-        JButton redButton_P1;
-        JButton redButton_P2;
-        JButton blueButton_P1;
-        JButton blueButton_P2;
-        JButton greenButton_P1;
-        JButton greenButton_P2;
+        JButton redButton;
+        JButton orangeButton;
+        JButton yellowButton;
+        JButton greenButton;
+        JButton blueButton;
+        JButton magentaButton;
         
         JLabel player1InfoLabel;
         JLabel player2InfoLabel;
@@ -35,12 +35,13 @@ public class OptionsView extends JPanel{
             
             player1NameField = new JTextField("Enter Player 1 Name");
             player2NameField = new JTextField("Enter Player 2 Name");
-            redButton_P1 = new JButton("Red");
-            redButton_P2 = new JButton("Red");
-            blueButton_P1 = new JButton("Blue");
-            blueButton_P2 = new JButton("Blue");
-            greenButton_P1 = new JButton("Green");
-            greenButton_P2 = new JButton("Green");
+            redButton = new JButton("Red");
+            orangeButton = new JButton("Orange");
+            yellowButton = new JButton("Yellow");
+            greenButton = new JButton("Green");
+            blueButton = new JButton("Blue");
+            magentaButton = new JButton("Magenta");
+            
             player1InfoLabel = new JLabel("No Info Yet");
             player2InfoLabel = new JLabel("No Info Yet");
             updatePlayer1InfoButton = new JButton("Update Player 1 Info");
@@ -51,35 +52,35 @@ public class OptionsView extends JPanel{
             
             add(player1NameField);
             add(player2NameField);
-            add(redButton_P1);
-            add(redButton_P2);
-            add(blueButton_P1);
-            add(blueButton_P2);
-            add(greenButton_P1);
-            add(greenButton_P2);
+            add(redButton);
+            add(orangeButton);
+            add(yellowButton);
+            add(greenButton);
+            add(blueButton);
+            add(magentaButton);
             add(updatePlayer1InfoButton);
             add(updatePlayer2InfoButton);
             add(player1InfoLabel);
             add(player2InfoLabel);
         }
         
-        public void addP1RedButtonListener(ActionListener alR1) {
-            redButton_P1.addActionListener(alR1);
+        public void addRedButtonListener(ActionListener alR) {
+            redButton.addActionListener(alR);
         }
-        public void addP2RedButtonListener(ActionListener alR2) {
-            redButton_P2.addActionListener(alR2);
+        public void addOrangeButtonListener(ActionListener alO) {
+            orangeButton.addActionListener(alO);
         }
-        public void addP1BlueButtonListener(ActionListener alB1) {
-            blueButton_P1.addActionListener(alB1);
+        public void addYellowButtonListener(ActionListener alY) {
+            yellowButton.addActionListener(alY);
         }
-        public void addP2BlueButtonListener(ActionListener alB2) {
-            blueButton_P2.addActionListener(alB2);
+        public void addGreenButtonListener(ActionListener alG) {
+            greenButton.addActionListener(alG);
         }
-        public void addP1GreenButtonListener(ActionListener alG1) {
-            greenButton_P1.addActionListener(alG1);
+        public void addBlueButtonListener(ActionListener alB) {
+            blueButton.addActionListener(alB);
         }
-        public void addP2GreenButtonListener(ActionListener alG2) {
-            greenButton_P2.addActionListener(alG2);
+        public void addP2GreenButtonListener(ActionListener alM) {
+            magentaButton.addActionListener(alM);
         }
         public void addUpdatePlayer1InfoButtonButtonListener(ActionListener alP1Info) {
             updatePlayer1InfoButton.addActionListener(alP1Info);
