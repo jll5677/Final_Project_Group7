@@ -29,6 +29,8 @@ public class MainView extends JPanel{
         welcomeLabel = new JLabel("Welcome to Box Jump!");
         player1TempLabel = new JLabel("No info yet.");
         player2TempLabel = new JLabel("No info yet.");
+        updatePlayer1Label = new JButton("Show Player 1 Settings");
+        updatePlayer2Label = new JButton("Show Player 2 Settings");
         
         add(welcomeLabel);
         add(player1TempLabel);
