@@ -24,6 +24,9 @@ public class OptionsView extends JPanel{
         JLabel player1InfoLabel;
         JLabel player2InfoLabel;
         
+        JButton updatePlayer1InfoButton;
+        JButton updatePlayer2InfoButton;
+        
         OptionsModel o_model;
         
         OptionsView(OptionsModel o_model)
@@ -40,8 +43,10 @@ public class OptionsView extends JPanel{
             greenButton_P2 = new JButton("Green");
             player1InfoLabel = new JLabel("No Info Yet");
             player2InfoLabel = new JLabel("No Info Yet");
+            updatePlayer1InfoButton = new JButton("Update Player 1 Info");
+            updatePlayer2InfoButton = new JButton("Update Player 2 Info");
             
-            GridLayout grid = new GridLayout(2,5);
+            GridLayout grid = new GridLayout(2,6);
             setLayout(grid);
             
             add(player1NameField);
@@ -49,12 +54,14 @@ public class OptionsView extends JPanel{
             add(blueButton_P1);
             add(greenButton_P1);
             add(player1InfoLabel);
+            add(updatePlayer1InfoButton);
             
             add(player2NameField);
             add(redButton_P2);
             add(blueButton_P2);
             add(greenButton_P2);
             add(player2InfoLabel);
+            add(updatePlayer2InfoButton);
         }
         
         public void addP1RedButtonListener(ActionListener alR1) {
