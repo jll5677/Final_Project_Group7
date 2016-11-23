@@ -24,7 +24,7 @@ public class OptionsController {
         this.o_model = o_model;
         this.o_view = o_view;
         
-        MainView m_view = new MainView();
+        final MainView m_view = new MainView();
         
         class ButtonListener implements ActionListener {
             public void actionPerformed(ActionEvent e) {
@@ -50,7 +50,6 @@ public class OptionsController {
                 if(clickSource == o_view.updatePlayer1InfoButton) {
                     o_model.setPlayer1Name(o_view.player1NameField.getText());
                     o_view.player1InfoLabel.setText("" + o_model.getPlayer1Name() + " is ready to play!");
-                    m_view.player1TempLabel
                 }
                 if(clickSource == o_view.updatePlayer2InfoButton) {
                     o_model.setPlayer2Name(o_view.player2NameField.getText());
