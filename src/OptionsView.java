@@ -79,7 +79,7 @@ public class OptionsView extends JPanel{
         public void addBlueButtonListener(ActionListener alB) {
             blueButton.addActionListener(alB);
         }
-        public void addP2GreenButtonListener(ActionListener alM) {
+        public void addMagentaButtonListener(ActionListener alM) {
             magentaButton.addActionListener(alM);
         }
         public void addUpdatePlayer1InfoButtonButtonListener(ActionListener alP1Info) {
