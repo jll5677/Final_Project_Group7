@@ -21,7 +21,7 @@ public class MainView extends JPanel{
     
     MainView()
     {
-        GridLayout grid = new GridLayout(3,1);
+        GridLayout grid = new GridLayout(5,1);
         setLayout(grid);
         
         OptionsModel o_model = new OptionsModel();
@@ -34,8 +34,8 @@ public class MainView extends JPanel{
         
         add(welcomeLabel);
         add(player1TempLabel);
-        add(player2TempLabel);
         add(updatePlayer1Label);
+        add(player2TempLabel);
         add(updatePlayer2Label);
     }
     public void addUpdatePlayer1LabelButtonListener(ActionListener alP1Label) {
