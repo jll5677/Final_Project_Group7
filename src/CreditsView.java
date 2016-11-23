@@ -1,6 +1,7 @@
 
+import java.awt.GridLayout;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.JLabel;
 
 
 /*
@@ -15,18 +16,22 @@ import javax.swing.JTextField;
  */
 public class CreditsView extends JPanel{
 
-    JTextField credit1;
-    JTextField credit2;
-    JTextField credit3;
+    JLabel credit1;
+    JLabel credit2;
+    JLabel credit3;
     
     CreditsView()
     {
-      credit1 = new JTextField("Cody Farrell");
-      credit2 = new JTextField("Jian Li");
-      credit3 = new JTextField("Daniel Backer");
-      add(credit1);
-      add(credit2);
-      add(credit3);
+    GridLayout grid = new GridLayout(1,3);
+    setLayout(grid);
+        
+    credit1 = new JLabel("Cody Farrell");
+    credit2 = new JLabel("Jian Li");
+    credit3 = new JLabel("Daniel Backer");
+    
+    add(credit1);
+    add(credit2);
+    add(credit3);
     }
 
     

@@ -1,6 +1,6 @@
 
+import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,7 +14,7 @@ import javax.swing.JTextField;
  */
 public class InstructionView extends JPanel{
     InstructionView(){
-        JTextField info = new JTextField("To move the character(box) player one uses left");
+        JLabel info = new JLabel("To move the character(box) player one uses left");
         add(info);
     }
 }
