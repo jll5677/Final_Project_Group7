@@ -55,12 +55,12 @@ public class OptionsController {
                 }
             }
         }
-        o_view.addP1RedButtonListener(new ButtonListener());
-        o_view.addP2RedButtonListener(new ButtonListener());
-        o_view.addP1BlueButtonListener(new ButtonListener());
-        o_view.addP2BlueButtonListener(new ButtonListener());
-        o_view.addP1GreenButtonListener(new ButtonListener());
-        o_view.addP2GreenButtonListener(new ButtonListener());
+        o_view.addRedButtonListener(new ButtonListener());
+        o_view.addOrangeButtonListener(new ButtonListener());
+        o_view.addYellowButtonListener(new ButtonListener());
+        o_view.addGreenButtonListener(new ButtonListener());
+        o_view.addBlueButtonListener(new ButtonListener());
+        o_view.addMagentaButtonListener(new ButtonListener());
         o_view.addUpdatePlayer1InfoButtonButtonListener(new ButtonListener());
         o_view.addUpdatePlayer2InfoButtonButtonListener(new ButtonListener());
     }
