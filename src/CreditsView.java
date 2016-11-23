@@ -22,7 +22,7 @@ public class CreditsView extends JPanel{
     
     CreditsView()
     {
-    GridLayout grid = new GridLayout(1,3);
+    GridLayout grid = new GridLayout(3,1);
     setLayout(grid);
         
     credit1 = new JLabel("Cody Farrell");
