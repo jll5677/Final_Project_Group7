@@ -16,12 +16,12 @@ public class MainView extends JPanel{
     private String player2Name;
     private String player2Color;
     
-    MainView(OptionsModel o_model)
+    MainView()
     {
         GridLayout grid = new GridLayout(3,1);
         setLayout(grid);
         
-        o_model = new OptionsModel();
+        OptionsModel o_model = new OptionsModel();
         
         player1Name = o_model.getPlayer1Name();
         player2Name = o_model.getPlayer2Name();
