@@ -35,7 +35,6 @@ public class MainModel {
     public Color getPlayer2Color() {
         return player2Color;
     }
-    
     public String getPlayer1ColorString() {
         Color color = getPlayer1Color();
         
@@ -51,7 +50,6 @@ public class MainModel {
         
         return player1ColorString;
     }
-    
     public String getPlayer2ColorString() {
         Color color = getPlayer2Color();
         

@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -17,8 +18,19 @@ public class MainView extends JPanel{
     JButton updatePlayer1Label;
     JButton updatePlayer2Label;
     
-    MainView()
+    private String player1Name;
+    private String player2Name;
+    private Color player1Color;
+    private Color player2Color;
+    private String player1ColorString;
+    private String player2ColorString;
+    
+    MainModel m_model;
+    
+    MainView(final MainModel m_model)
     {
+        this.m_model = m_model;
+        
         GridLayout grid = new GridLayout(5,1);
         setLayout(grid);
         

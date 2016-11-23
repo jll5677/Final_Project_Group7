@@ -4,9 +4,11 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 public class MainController {
+    MainModel m_model;
     MainView m_view;
     
-    MainController(final MainView m_view) {
+    MainController(final MainModel m_model, final MainView m_view) {
+        this.m_model = m_model;
         this.m_view = m_view;
         
         final OptionsModel o_model = new OptionsModel();

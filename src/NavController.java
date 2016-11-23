@@ -22,6 +22,7 @@ public class NavController {
     OptionsController o_Controller;  
            
     // TODO: Create instances of your MainModel and MainController once you implement them
+    MainModel m_model;
     MainView m_view;
     MainController m_controller;
     InstructionView i_view;
@@ -35,8 +36,9 @@ public class NavController {
         o_view = new OptionsView(o_model);
         o_Controller = new OptionsController(o_model, o_view); 
         
-        m_view = new MainView();
-        m_controller = new MainController(m_view);
+        m_model = new MainModel();
+        m_view = new MainView(m_model);
+        m_controller = new MainController(m_model, m_view);
         i_view = new InstructionView();
         c_view = new CreditsView();
                 
