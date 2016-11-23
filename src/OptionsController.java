@@ -50,7 +50,7 @@ public class OptionsController {
                 if(clickSource == o_view.updatePlayer1InfoButton) {
                     o_model.setPlayer1Name(o_view.player1NameField.getText());
                     o_view.player1InfoLabel.setText("" + o_model.getPlayer1Name() + " is ready to play!");
-                    
+                    m_view.player1TempLabel
                 }
                 if(clickSource == o_view.updatePlayer2InfoButton) {
                     o_model.setPlayer2Name(o_view.player2NameField.getText());
