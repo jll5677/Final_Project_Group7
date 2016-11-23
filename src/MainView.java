@@ -27,12 +27,24 @@ public class MainView extends JPanel{
         player2Name = o_model.getPlayer2Name();
         
         JLabel welcomeLabel = new JLabel("Welcome to the Main View!");
-        JLabel player1TempLabel = new JLabel("PLAYER 1   NAME: " + player1Name + " COLOR: " + player1Color);
-        JLabel player2TempLabel = new JLabel("PLAYER 2   NAME: " + player2Name + " COLOR: " + player2Color);
+        JLabel player1TempLabel = new JLabel("PLAYER 1   NAME: " + player1Name + "    COLOR: " + player1Color);
+        JLabel player2TempLabel = new JLabel("PLAYER 2   NAME: " + player2Name + "    COLOR: " + player2Color);
         
         add(welcomeLabel);
         add(player1TempLabel);
         add(player2TempLabel);
+    }
+    public void setPlayer1Name(String player1Name) {
+        this.player1Name = player1Name;
+    }
+    public void setPlayer2Name(String player2Name) {
+        this.player2Name = player2Name;
+    }
+    public String getPlayer1Name() {
+        return player1Name;
+    }
+    public String getPlayer2Name() {
+        return player2Name;
     }
     
     public String getPlayer1Color(OptionsModel o_model) {
