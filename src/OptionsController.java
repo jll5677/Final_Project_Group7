@@ -45,12 +45,16 @@ public class OptionsController {
                 if(clickSource == o_view.magentaButton) {
                     o_model.setPlayer2Color(Color.MAGENTA);
                 }
-                if(clickSource == o_view.updatePlayer1InfoButton) {
+                if(clickSource == o_view.savePlayer1InfoButton) {
                     o_model.setPlayer1Name(o_view.player1NameField.getText());
+                }
+                if(clickSource == o_view.showPlayer1InfoButton) {
                     o_view.player1InfoLabel.setText("" + o_model.getPlayer1Name() + " is ready to play!  Color selection is: " + o_model.getPlayer1ColorString());
                 }
-                if(clickSource == o_view.updatePlayer2InfoButton) {
+                if(clickSource == o_view.savePlayer2InfoButton) {
                     o_model.setPlayer2Name(o_view.player2NameField.getText());
+                }
+                if(clickSource == o_view.showPlayer2InfoButton) {
                     o_view.player2InfoLabel.setText("" + o_model.getPlayer2Name() + " is ready to play!  Color selection is: "+ o_model.getPlayer2ColorString());
                 }
             }
@@ -61,8 +65,10 @@ public class OptionsController {
         o_view.addGreenButtonListener(new ButtonListener());
         o_view.addBlueButtonListener(new ButtonListener());
         o_view.addMagentaButtonListener(new ButtonListener());
-        o_view.addUpdatePlayer1InfoButtonButtonListener(new ButtonListener());
-        o_view.addUpdatePlayer2InfoButtonButtonListener(new ButtonListener());
+        o_view.addSavePlayer1InfoButtonListener(new ButtonListener());
+        o_view.addShowPlayer1InfoButtonListener(new ButtonListener());
+        o_view.addSavePlayer2InfoButtonListener(new ButtonListener());
+        o_view.addShowPlayer2InfoButtonListener(new ButtonListener());
     }
     
 }
