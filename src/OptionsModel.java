@@ -11,6 +11,8 @@ public class OptionsModel {
     private int player1Score;
     private int player2Score;
     private int highScore;
+    private String player1ColorString;
+    private String player2ColorString;
     
     OptionsModel(){}
     
@@ -62,5 +64,37 @@ public class OptionsModel {
     }
     public int getHighScore() {
         return highScore;
+    }
+    
+    public String getPlayer1ColorString() {
+        Color color = getPlayer1Color();
+        
+        if(color == Color.RED) {
+            player1ColorString = "Red";
+        }
+        if(color == Color.BLUE) {
+            player1ColorString = "Blue";
+        }
+        if(color == Color.GREEN) {
+            player1ColorString = "Green";
+        }
+        
+        return player1ColorString;
+    }
+    
+    public String getPlayer2ColorString() {
+        Color color = getPlayer2Color();
+        
+        if(color == Color.RED) {
+            player2ColorString = "Red";
+        }
+        if(color == Color.BLUE) {
+            player2ColorString = "Blue";
+        }
+        if(color == Color.GREEN) {
+            player2ColorString = "Green";
+        }
+        
+        return player2ColorString;
     }
 }
