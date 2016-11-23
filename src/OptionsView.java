@@ -81,6 +81,12 @@ public class OptionsView extends JPanel{
         public void addP2GreenButtonListener(ActionListener alG2) {
             greenButton_P2.addActionListener(alG2);
         }
+        public void addUpdatePlayer1InfoButtonButtonListener(ActionListener alP1Info) {
+            updatePlayer1InfoButton.addActionListener(alP1Info);
+        }
+        public void addUpdatePlayer2InfoButtonButtonListener(ActionListener alP2Info) {
+            updatePlayer2InfoButton.addActionListener(alP2Info);
+        }
         
         public void setPlayer1Name() {
             o_model.setPlayer1Name(player1NameField.getText());
