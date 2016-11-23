@@ -47,11 +47,11 @@ public class OptionsController {
                 }
                 if(clickSource == o_view.updatePlayer1InfoButton) {
                     o_model.setPlayer1Name(o_view.player1NameField.getText());
-                    o_view.player1InfoLabel.setText("" + o_model.getPlayer1Name() + " is ready to play!");
+                    o_view.player1InfoLabel.setText("" + o_model.getPlayer1Name() + " is ready to play!  Color selection is: " + o_model.getPlayer1ColorString());
                 }
                 if(clickSource == o_view.updatePlayer2InfoButton) {
                     o_model.setPlayer2Name(o_view.player2NameField.getText());
-                    o_view.player2InfoLabel.setText("" + o_model.getPlayer2Name() + " is ready to play!");
+                    o_view.player2InfoLabel.setText("" + o_model.getPlayer2Name() + " is ready to play!  Color selection is: "+ o_model.getPlayer2ColorString());
                 }
             }
         }
