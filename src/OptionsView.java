@@ -46,22 +46,21 @@ public class OptionsView extends JPanel{
             updatePlayer1InfoButton = new JButton("Update Player 1 Info");
             updatePlayer2InfoButton = new JButton("Update Player 2 Info");
             
-            GridLayout grid = new GridLayout(2,6);
+            GridLayout grid = new GridLayout(6,2);
             setLayout(grid);
             
             add(player1NameField);
-            add(redButton_P1);
-            add(blueButton_P1);
-            add(greenButton_P1);
-            add(player1InfoLabel);
-            add(updatePlayer1InfoButton);
-            
             add(player2NameField);
+            add(redButton_P1);
             add(redButton_P2);
+            add(blueButton_P1);
             add(blueButton_P2);
+            add(greenButton_P1);
             add(greenButton_P2);
-            add(player2InfoLabel);
+            add(updatePlayer1InfoButton);
             add(updatePlayer2InfoButton);
+            add(player1InfoLabel);
+            add(player2InfoLabel);
         }
         
         public void addP1RedButtonListener(ActionListener alR1) {
