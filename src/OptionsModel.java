@@ -72,11 +72,11 @@ public class OptionsModel {
         if(color == Color.RED) {
             player1ColorString = "Red";
         }
-        if(color == Color.ORANGE) {
-            player1ColorString = "Orange";
-        }
         if(color == Color.YELLOW) {
             player1ColorString = "Yellow";
+        }
+        if(color == Color.BLUE) {
+            player1ColorString = "Blue";
         }
         
         return player1ColorString;
@@ -85,11 +85,11 @@ public class OptionsModel {
     public String getPlayer2ColorString() {
         Color color = getPlayer2Color();
         
+        if(color == Color.ORANGE) {
+            player2ColorString = "Orange";
+        }
         if(color == Color.GREEN) {
             player2ColorString = "Green";
-        }
-        if(color == Color.BLUE) {
-            player2ColorString = "Blue";
         }
         if(color == Color.MAGENTA) {
             player2ColorString = "Magenta";
