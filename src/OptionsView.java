@@ -87,11 +87,4 @@ public class OptionsView extends JPanel{
         public void addUpdatePlayer2InfoButtonButtonListener(ActionListener alP2Info) {
             updatePlayer2InfoButton.addActionListener(alP2Info);
         }
-        
-        public void setPlayer1Name() {
-            o_model.setPlayer1Name(player1NameField.getText());
-        }
-        public void setPlayer2Name() {
-            o_model.setPlayer2Name(player2NameField.getText());
-        }
 }

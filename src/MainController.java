@@ -15,15 +15,15 @@ public class MainController {
         class ButtonListener implements ActionListener {
             public void actionPerformed(ActionEvent e) {
                 JButton clickSource = (JButton)e.getSource();
-                if(clickSource == o_view.updatePlayer1InfoButton) {
+                if(clickSource == m_view.updatePlayer1Label) {
                     m_view.player1TempLabel.setText("PLAYER 1 INFO - Name: " + o_view.player1NameField.getText() + " Color: " + o_model.getPlayer1ColorString());
                 }
-                if(clickSource == o_view.updatePlayer2InfoButton) {
+                if(clickSource == m_view.updatePlayer2Label) {
                     m_view.player2TempLabel.setText("PLAYER 2 INFO - Name: " + o_view.player2NameField.getText() + " Color: " + o_model.getPlayer2ColorString());
                 }
             }
         }
-        o_view.addUpdatePlayer1InfoButtonButtonListener(new ButtonListener());
-        o_view.addUpdatePlayer2InfoButtonButtonListener(new ButtonListener());
+        m_view.addUpdatePlayer1LabelButtonListener(new ButtonListener());
+        m_view.addUpdatePlayer2LabelButtonListener(new ButtonListener());
     }
 }
