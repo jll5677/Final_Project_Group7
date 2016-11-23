@@ -50,7 +50,7 @@ public class OptionsView extends JPanel{
             player1InfoLabel = new JLabel("No Info Yet");
             player2InfoLabel = new JLabel("No Info Yet");
             
-            GridLayout grid = new GridLayout(6,2);
+            GridLayout grid = new GridLayout(7,2);
             setLayout(grid);
             
             add(player1NameField);
