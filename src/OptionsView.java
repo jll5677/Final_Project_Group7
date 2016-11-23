@@ -1,4 +1,5 @@
 
+import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -39,6 +40,9 @@ public class OptionsView extends JPanel{
             greenButton_P2 = new JButton("Green");
             player1InfoLabel = new JLabel("No Info Yet");
             player2InfoLabel = new JLabel("No Info Yet");
+            
+            GridLayout grid = new GridLayout(2,5);
+            setLayout(grid);
             
             add(player1NameField);
             add(redButton_P1);
