@@ -42,6 +42,6 @@ public class MainView extends JPanel{
         updatePlayer1Label.addActionListener(alP1Label);
     }
     public void addUpdatePlayer2LabelButtonListener(ActionListener alP2Label) {
-        updatePlayer1Label.addActionListener(alP2Label);
+        updatePlayer2Label.addActionListener(alP2Label);
     }
 }
