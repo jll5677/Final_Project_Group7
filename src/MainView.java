@@ -23,12 +23,9 @@ public class MainView extends JPanel{
         
         OptionsModel o_model = new OptionsModel();
         
-        player1Name = o_model.getPlayer1Name();
-        player2Name = o_model.getPlayer2Name();
-        
-        JLabel welcomeLabel = new JLabel("Welcome to the Main View!");
-        JLabel player1TempLabel = new JLabel("PLAYER 1   NAME: " + player1Name + "    COLOR: " + player1Color);
-        JLabel player2TempLabel = new JLabel("PLAYER 2   NAME: " + player2Name + "    COLOR: " + player2Color);
+        JLabel welcomeLabel = new JLabel("Welcome to Box Jump!");
+        JLabel player1TempLabel = new JLabel("No info yet.");
+        JLabel player2TempLabel = new JLabel("No info yet.");
         
         add(welcomeLabel);
         add(player1TempLabel);
