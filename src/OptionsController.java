@@ -18,13 +18,11 @@ public class OptionsController {
     
     OptionsModel o_model;
     OptionsView o_view;
-    MainView m_view;
     
-    OptionsController(final OptionsModel o_model, final OptionsView o_view, final MainView m_view)
+    OptionsController(final OptionsModel o_model, final OptionsView o_view)
     {
         this.o_model = o_model;
         this.o_view = o_view;
-        this.m_view = m_view;
         
         class ButtonListener implements ActionListener {
             public void actionPerformed(ActionEvent e) {
