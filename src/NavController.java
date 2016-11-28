@@ -32,13 +32,13 @@ public class NavController {
         this.n_model = n_model;
         this.n_view = n_view;
         
-        o_model = new OptionsModel();        
-        o_view = new OptionsView(o_model);
-        o_controller = new OptionsController(o_model, o_view); 
-        
         m_model = new MainModel();
         m_view = new MainView(m_model);
         m_controller = new MainController(m_model, m_view);
+        
+        o_model = new OptionsModel();        
+        o_view = new OptionsView(o_model);
+        o_controller = new OptionsController(o_model, o_view, m_model);
         
         i_view = new InstructionView();
         
