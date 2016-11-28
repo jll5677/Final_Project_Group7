@@ -56,7 +56,7 @@ public class OptionsController {
                 }
                 if(clickSource == o_view.savePlayer2InfoButton) {
                     o_model.setPlayer2Name(o_view.player2NameField.getText());
-                    m_model.setPlayer1Name(o_view.player2NameField.getText());
+                    m_model.setPlayer2Name(o_view.player2NameField.getText());
                 }
                 if(clickSource == o_view.showPlayer2InfoButton) {
                     o_view.player2InfoLabel.setText("" + o_model.getPlayer2Name() + " is ready to play!  Color selection is: "+ o_model.getPlayer2ColorString());

@@ -6,6 +6,7 @@ import javax.swing.JButton;
 public class MainController {
     MainModel m_model;
     MainView m_view;
+    OptionsModel o_model;
     
     MainController(final MainModel m_model, final MainView m_view) {
         this.m_model = m_model;
