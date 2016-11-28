@@ -65,4 +65,8 @@ public class MainModel {
         
         return player2ColorString;
     }
+
+    public void showPlayer1RecordTemp(String yes) {
+        
+    }
 }

@@ -13,7 +13,7 @@ public class App {
         NavView view = new NavView(model);
         NavController controller = new NavController(model, view);
         
-        view.setSize(800,800);
+        view.setSize(700,700);
         
         view.setVisible(true);
         
