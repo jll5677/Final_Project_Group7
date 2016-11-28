@@ -18,11 +18,13 @@ public class OptionsController {
     
     OptionsModel o_model;
     OptionsView o_view;
+    MainModel m_model;
     
-    OptionsController(final OptionsModel o_model, final OptionsView o_view)
+    OptionsController(final OptionsModel o_model, final OptionsView o_view, final MainModel m_model)
     {
         this.o_model = o_model;
         this.o_view = o_view;
+        this.m_model = m_model;
         
         class ButtonListener implements ActionListener {
             public void actionPerformed(ActionEvent e) {
@@ -47,6 +49,7 @@ public class OptionsController {
                 }
                 if(clickSource == o_view.savePlayer1InfoButton) {
                     o_model.setPlayer1Name(o_view.player1NameField.getText());
+                    m_model.setPlayer1Name(o_view.player1NameField.getText());
                 }
                 if(clickSource == o_view.showPlayer1InfoButton) {
                     o_view.player1InfoLabel.setText("" + o_model.getPlayer1Name() + " is ready to play!  Color selection is: " + o_model.getPlayer1ColorString());

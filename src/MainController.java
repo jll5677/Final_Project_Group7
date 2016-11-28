@@ -25,4 +25,5 @@ public class MainController {
         m_view.addUpdatePlayer1LabelButtonListener(new ButtonListener());
         m_view.addUpdatePlayer2LabelButtonListener(new ButtonListener());
     }
+    
 }
