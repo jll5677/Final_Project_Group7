@@ -8,6 +8,7 @@ public class MainModel {
     private Color player2Color;
     private String player1ColorString;
     private String player2ColorString;
+    private int level;
     
     MainModel(){}
     public void setPlayer1Name(String player1Name) {
@@ -34,6 +35,9 @@ public class MainModel {
     }
     public Color getPlayer2Color() {
         return player2Color;
+    }
+    public int getlevel() {
+        return level;
     }
     public String getPlayer1ColorString() {
         Color color = getPlayer1Color();
@@ -64,9 +68,5 @@ public class MainModel {
         }
         
         return player2ColorString;
-    }
-
-    public void showPlayer1RecordTemp(String yes) {
-        
     }
 }

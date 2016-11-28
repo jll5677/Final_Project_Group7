@@ -16,10 +16,10 @@ public class MainController {
             public void actionPerformed(ActionEvent e) {
                 JButton clickSource = (JButton)e.getSource();
                 if(clickSource == m_view.updatePlayer1Label) {
-                    m_view.player1TempLabel.setText("PLAYER 1 INFO - Name: " + m_model.getPlayer1Name() + " Color: " + m_model.getPlayer1ColorString());
+                    m_view.player1TempLabel.setText("PLAYER 1 INFO - Name: " + m_model.getPlayer1Name() + " Color: " + m_model.getPlayer1ColorString() + " level : " + m_model.getlevel());
                 }
                 if(clickSource == m_view.updatePlayer2Label) {
-                    m_view.player2TempLabel.setText("PLAYER 2 INFO - Name: " + m_model.getPlayer2Name() + " Color: " + m_model.getPlayer2ColorString());
+                    m_view.player2TempLabel.setText("PLAYER 2 INFO - Name: " + m_model.getPlayer2Name() + " Color: " + m_model.getPlayer2ColorString() + " level : " + m_model.getlevel());
                 }
             }
         }
