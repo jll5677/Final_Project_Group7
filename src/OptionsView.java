@@ -51,7 +51,7 @@ public class OptionsView extends JPanel{
             player1InfoLabel = new JLabel("No Info Yet");
             player2InfoLabel = new JLabel("No Info Yet");
             
-            levelInfo = new JButton("Choose level");
+            levelInfo = new JButton("Choose Level");
             level = new JSlider(JSlider.HORIZONTAL, 1, 3, 1);
             level.setMajorTickSpacing(1);
             level.setPaintTicks(true);
@@ -108,7 +108,7 @@ public class OptionsView extends JPanel{
         public void addShowPlayer2InfoButtonListener(ActionListener alShowP2) {
             showPlayer2InfoButton.addActionListener(alShowP2);
         }
-        public void addLevelInfoButtonListener(ActionListener LI) {
-            levelInfo.addActionListener(LI);
+        public void addLevelInfoButtonListener(ActionListener alLI) {
+            levelInfo.addActionListener(alLI);
         }
 }
