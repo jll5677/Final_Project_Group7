@@ -4,10 +4,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-/**
- *
- * @author jrimland
- */
+
 public class NavViewBottomMenuPanel extends JPanel{
     JButton mainButton;
     JButton optionsButton;

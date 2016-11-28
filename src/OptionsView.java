@@ -6,10 +6,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-/**
- *
- * @author jrimland-air
- */
+
 public class OptionsView extends JPanel{
         JTextField player1NameField;
         JTextField player2NameField;

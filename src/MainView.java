@@ -5,12 +5,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-/**
- *
- *  The View for your main gameplay or user interaction could go here.
- * 
- * @author jrimland
- */
+
 public class MainView extends JPanel{
     JLabel welcomeLabel;
     JLabel player1TempLabel;
@@ -45,6 +40,8 @@ public class MainView extends JPanel{
         add(updatePlayer1Label);
         add(player2TempLabel);
         add(updatePlayer2Label);
+        
+        
     }
     public void addUpdatePlayer1LabelButtonListener(ActionListener alP1Label) {
         updatePlayer1Label.addActionListener(alP1Label);
