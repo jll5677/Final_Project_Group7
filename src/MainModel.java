@@ -23,6 +23,9 @@ public class MainModel {
     public void setPlayer2Color(Color player2Color) {
         this.player2Color = player2Color;
     }
+    public void setLevel(int level) {
+        this.level = level;
+    }
     
     public String getPlayer1Name() {
         return player1Name;

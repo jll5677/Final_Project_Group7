@@ -58,6 +58,9 @@ public class OptionsController {
                 if(clickSource == o_view.showPlayer2InfoButton) {
                     o_view.player2InfoLabel.setText("" + o_model.getPlayer2Name() + " is ready to play!  Color selection is: "+ o_model.getPlayer2ColorString());
                 }
+                if(clickSource == o_view.levelInfo) {
+                    m_model.setLevel(o_view.level.getValue());
+                }
             }
         }
         o_view.addRedButtonListener(new ButtonListener());
@@ -70,6 +73,7 @@ public class OptionsController {
         o_view.addShowPlayer1InfoButtonListener(new ButtonListener());
         o_view.addSavePlayer2InfoButtonListener(new ButtonListener());
         o_view.addShowPlayer2InfoButtonListener(new ButtonListener());
+        o_view.addLevelInfoButtonListener(new ButtonListener());
     }
     
 }
