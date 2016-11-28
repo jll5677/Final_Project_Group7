@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSlider;
 import javax.swing.JTextField;
 
 /**
@@ -28,6 +29,9 @@ public class OptionsView extends JPanel{
         JButton savePlayer2InfoButton;
         JButton showPlayer2InfoButton;
         
+        JButton player1Record;
+        JButton player2Record;
+        
         OptionsModel o_model;
         
         OptionsView(OptionsModel o_model)
@@ -43,6 +47,9 @@ public class OptionsView extends JPanel{
             blueButton = new JButton("Blue");
             magentaButton = new JButton("Magenta");
             
+            player1Record = new JButton("Record Score");
+            player2Record = new JButton("Record Score");
+            
             savePlayer1InfoButton = new JButton("Save Info");
             showPlayer1InfoButton = new JButton("Show Info");
             savePlayer2InfoButton = new JButton("Save Info");
@@ -50,7 +57,7 @@ public class OptionsView extends JPanel{
             player1InfoLabel = new JLabel("No Info Yet");
             player2InfoLabel = new JLabel("No Info Yet");
             
-            GridLayout grid = new GridLayout(7,2);
+            GridLayout grid = new GridLayout(8,2);
             setLayout(grid);
             
             add(player1NameField);
@@ -61,6 +68,8 @@ public class OptionsView extends JPanel{
             add(greenButton);
             add(blueButton);
             add(magentaButton);
+            add(player1Record);
+            add(player2Record);
             add(savePlayer1InfoButton);
             add(savePlayer2InfoButton);
             add(showPlayer1InfoButton);
@@ -86,6 +95,12 @@ public class OptionsView extends JPanel{
         }
         public void addMagentaButtonListener(ActionListener alM) {
             magentaButton.addActionListener(alM);
+        }
+        public void addRecord1ButtonListener(ActionListener r) {
+            player1Record.addActionListener(r);
+        }
+        public void addRecord2ButtonListener(ActionListener r) {
+            player2Record.addActionListener(r);
         }
         public void addSavePlayer1InfoButtonListener(ActionListener alSaveP1) {
             savePlayer1InfoButton.addActionListener(alSaveP1);

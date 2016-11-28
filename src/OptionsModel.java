@@ -13,6 +13,8 @@ public class OptionsModel {
     private int highScore;
     private String player1ColorString;
     private String player2ColorString;
+    private int player1Record;
+    private int player2Record;
     
     OptionsModel(){}
     
@@ -40,6 +42,12 @@ public class OptionsModel {
     public void setHighScore(int highScore) {
         this.highScore = highScore;
     }
+    public void setPlayer1Record(int player1Record) {
+        this.player1Record = player1Record;
+    }
+    public void setPlayer2Record(int player2Record) {
+        this.player2Record = player2Record;
+    }
     
     public String getPlayer1Name() {
         return player1Name;
@@ -64,6 +72,12 @@ public class OptionsModel {
     }
     public int getHighScore() {
         return highScore;
+    }
+    public int getPlayer1Record() {
+        return player1Record;
+    }
+    public int getPlayer2Record() {
+        return player2Record;
     }
     
     public String getPlayer1ColorString() {
