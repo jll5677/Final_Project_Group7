@@ -19,7 +19,7 @@ public class NavController {
     //Instance Variables for Options Model, View, and Controller
     OptionsModel o_model;
     OptionsView o_view;
-    OptionsController o_Controller;  
+    OptionsController o_controller;  
            
     // TODO: Create instances of your MainModel and MainController once you implement them
     MainModel m_model;
@@ -34,12 +34,14 @@ public class NavController {
         
         o_model = new OptionsModel();        
         o_view = new OptionsView(o_model);
-        o_Controller = new OptionsController(o_model, o_view); 
+        o_controller = new OptionsController(o_model, o_view); 
         
         m_model = new MainModel();
         m_view = new MainView(m_model);
         m_controller = new MainController(m_model, m_view);
+        
         i_view = new InstructionView();
+        
         c_view = new CreditsView();
                 
         n_view.addOptionsButtonListener(new OptionsButtonListener());
