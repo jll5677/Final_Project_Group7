@@ -12,6 +12,7 @@ public class MainView extends JPanel{
     JLabel player2TempLabel;
     JButton updatePlayer1Label;
     JButton updatePlayer2Label;
+    JButton playGame;
     
     private String player1Name;
     private String player2Name;
@@ -26,22 +27,27 @@ public class MainView extends JPanel{
     {
         this.m_model = m_model;
         
-        GridLayout grid = new GridLayout(5,1);
+        GridLayout grid = new GridLayout(6,1);
         setLayout(grid);
         
         welcomeLabel = new JLabel("Welcome to Box Jump!");
+        playGame = new JButton("Start Game");
         player1TempLabel = new JLabel("No info yet.");
         player2TempLabel = new JLabel("No info yet.");
         updatePlayer1Label = new JButton("Show Player 1 Settings");
         updatePlayer2Label = new JButton("Show Player 2 Settings");
         
         add(welcomeLabel);
+        add(playGame);
         add(player1TempLabel);
         add(updatePlayer1Label);
         add(player2TempLabel);
         add(updatePlayer2Label);
         
         
+    }
+    public void addPlayGameButtonListener(ActionListener play) {
+        playGame.addActionListener(play);
     }
     public void addUpdatePlayer1LabelButtonListener(ActionListener alP1Label) {
         updatePlayer1Label.addActionListener(alP1Label);

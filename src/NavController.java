@@ -9,14 +9,11 @@ public class NavController {
     
     NavModel n_model;
     NavView n_view;
-    
-    
-    
+
     OptionsModel o_model;
     OptionsView o_view;
     OptionsController o_controller;  
            
-    
     MainModel m_model;
     MainView m_view;
     MainController m_controller;
