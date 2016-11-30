@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -22,6 +23,7 @@ public class MainView extends JPanel{
     private String player2ColorString;
     
     MainModel m_model;
+    MainView mVpanel;
     
     MainView(final MainModel m_model)
     {
@@ -44,10 +46,17 @@ public class MainView extends JPanel{
         add(player2TempLabel);
         add(updatePlayer2Label);
         
-        
+        mVpanel = new NavViewPanel();
+        add(mVpanel);
     }
-    public void addPlayGameButtonListener(ActionListener play) {
-        playGame.addActionListener(play);
+    public void switchToGamePlayPanel(GamePlay p_game)
+    {
+        mVpanel.removeSplash();
+        mVpanel.removeMain();
+        mVpanel.removeOptions();
+        mVpanel.removeInstruction();
+        mVpanel.removeCredits();
+        mVpanel.addPlay(p_game);
     }
     public void addUpdatePlayer1LabelButtonListener(ActionListener alP1Label) {
         updatePlayer1Label.addActionListener(alP1Label);
@@ -55,4 +64,9 @@ public class MainView extends JPanel{
     public void addUpdatePlayer2LabelButtonListener(ActionListener alP2Label) {
         updatePlayer2Label.addActionListener(alP2Label);
     }
+    public void addPlayGameButtonListener(ActionListener al) 
+    {    
+        mVpanel.menu.optionsButton.addActionListener(al);
+    }
+
 }

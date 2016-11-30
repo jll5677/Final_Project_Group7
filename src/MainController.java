@@ -7,11 +7,13 @@ public class MainController {
     MainModel m_model;
     MainView m_view;
     OptionsModel o_model;
+    GamePlay p_game;
     
     MainController(final MainModel m_model, final MainView m_view) {
         this.m_model = m_model;
         this.m_view = m_view;
-        
+        p_game = new GamePlay();
+      
        class ButtonListener implements ActionListener {
             public void actionPerformed(ActionEvent e) {
                 JButton clickSource = (JButton)e.getSource();
@@ -23,10 +25,14 @@ public class MainController {
                     m_view.player2TempLabel.setText("PLAYER 2 INFO - Name: " + m_model.getPlayer2Name() + " "
                             + "Color: " + m_model.getPlayer2ColorString() + " Level: " + m_model.getlevel());
                 }
+                if(clickSource == m_view.playGame) {
+                    m_view.switchToGamePlayPanel(p_game);
+                }
             }
         }
         m_view.addUpdatePlayer1LabelButtonListener(new ButtonListener());
         m_view.addUpdatePlayer2LabelButtonListener(new ButtonListener());
+        m_view.addPlayGameButtonListener(new ButtonListener());
+        
     }
-    
 }
