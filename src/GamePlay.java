@@ -12,14 +12,9 @@ public class GamePlay {
     GamePlay(){
         P1GamePiece = new JButton();
         P2GamePiece = new JButton();
-        P1GamePiece.setBackground(P1Color);
-        P2GamePiece.setBackground(P2Color);
-    }
-    
-    public void setP1Color() {
         P1Color = m_model.getPlayer1Color();
-    }
-    public void setP2Color() {
+        P1GamePiece.setBackground(P1Color);
         P2Color = m_model.getPlayer2Color();
+        P2GamePiece.setBackground(P2Color);
     }
 }
