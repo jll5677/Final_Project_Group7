@@ -1,3 +1,4 @@
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -14,16 +15,12 @@ public class MainView extends JPanel{
     JButton updatePlayer1Label;
     JButton updatePlayer2Label;
     JButton playGame;
-    
-    private String player1Name;
-    private String player2Name;
-    private Color player1Color;
-    private Color player2Color;
-    private String player1ColorString;
-    private String player2ColorString;
-    
+    CreditsView c_view;
+    InstructionView i_view;
+    OptionsView o_view;
+    MainView m_view;
+    GamePlay g_play;
     MainModel m_model;
-    MainView mVpanel;
     
     MainView(final MainModel m_model)
     {
@@ -45,28 +42,53 @@ public class MainView extends JPanel{
         add(updatePlayer1Label);
         add(player2TempLabel);
         add(updatePlayer2Label);
-        
-        mVpanel = new NavViewPanel();
-        add(mVpanel);
     }
-    public void switchToGamePlayPanel(GamePlay p_game)
+    
+    public void removeOptions()
     {
-        mVpanel.removeSplash();
-        mVpanel.removeMain();
-        mVpanel.removeOptions();
-        mVpanel.removeInstruction();
-        mVpanel.removeCredits();
-        mVpanel.addPlay(p_game);
+        if (this.o_view != null)
+            remove(this.o_view);
     }
+    
+    public void removeMain()
+    {
+        if (this.m_view != null)
+            remove(this.m_view);
+    }    
+    
+    public void removeInstruction()
+    {
+        if (this.i_view != null)
+            remove(this.i_view);
+    }
+    
+    public void removeCredits()
+    {
+        if (this.c_view != null)
+            remove(this.c_view);
+    }
+    public void addGamePlay(GamePlay g_play) {
+        add(g_play, BorderLayout.CENTER);
+        revalidate();
+        repaint();
+    }
+    
+    public void switchToGamePlayPanel(GamePlay g_play) {
+        removeOptions();
+        removeMain();
+        removeInstruction();
+        removeCredits();
+        addGamePlay(g_play);
+    }
+    
     public void addUpdatePlayer1LabelButtonListener(ActionListener alP1Label) {
         updatePlayer1Label.addActionListener(alP1Label);
     }
     public void addUpdatePlayer2LabelButtonListener(ActionListener alP2Label) {
         updatePlayer2Label.addActionListener(alP2Label);
     }
-    public void addPlayGameButtonListener(ActionListener al) 
-    {    
-        mVpanel.menu.optionsButton.addActionListener(al);
+    public void addPlayGameButtonListener(ActionListener alPG) {    
+        playGame.addActionListener(alPG);
     }
 
 }
