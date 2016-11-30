@@ -17,6 +17,8 @@ public class GamePlay extends JPanel{
         P1GamePiece.setBackground(P1Color);
         P2Color = m_model.getPlayer2Color();
         P2GamePiece.setBackground(P2Color);
+        P1GamePiece.setBounds(50, 50, 50, 50);
+        P2GamePiece.setBounds(50, 50, 50, 50);
         
         add(P1GamePiece);
         add(P2GamePiece);
