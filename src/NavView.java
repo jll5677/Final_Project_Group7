@@ -58,6 +58,14 @@ public class NavView extends JFrame{
         nVpanel.addCredits(c_view); 
     }
     
+    public void switchToGamePlayPanel(GamePlay g_play) {
+        nVpanel.removeSplash();
+        nVpanel.removeOptions();
+        nVpanel.removeMain();
+        nVpanel.removeInstruction();
+        nVpanel.removeCredits();
+        nVpanel.;
+    }
     
     public void addOptionsButtonListener(ActionListener al) 
     {    

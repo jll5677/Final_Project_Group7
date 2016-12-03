@@ -1,7 +1,5 @@
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -42,43 +40,6 @@ public class MainView extends JPanel{
         add(updatePlayer1Label);
         add(player2TempLabel);
         add(updatePlayer2Label);
-    }
-    
-    public void removeOptions()
-    {
-        if (this.o_view != null)
-            remove(this.o_view);
-    }
-    
-    public void removeMain()
-    {
-        if (this.m_view != null)
-            remove(this.m_view);
-    }    
-    
-    public void removeInstruction()
-    {
-        if (this.i_view != null)
-            remove(this.i_view);
-    }
-    
-    public void removeCredits()
-    {
-        if (this.c_view != null)
-            remove(this.c_view);
-    }
-    public void addGamePlay(GamePlay g_play) {
-        add(g_play, BorderLayout.CENTER);
-        revalidate();
-        repaint();
-    }
-    
-    public void switchToGamePlayPanel(GamePlay g_play) {
-        removeOptions();
-        removeMain();
-        removeInstruction();
-        removeCredits();
-        addGamePlay(g_play);
     }
     
     public void addUpdatePlayer1LabelButtonListener(ActionListener alP1Label) {
