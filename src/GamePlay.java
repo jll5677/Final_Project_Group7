@@ -31,12 +31,10 @@ public class GamePlay extends JPanel{
         
         P1GamePiece = new JButton();
         P2GamePiece = new JButton();
-        P1Color = m_model.getPlayer1Color();
         P1GamePiece.setBackground(P1Color);
-        P2Color = m_model.getPlayer2Color();
         P2GamePiece.setBackground(P2Color);
-        P1GamePiece.setBounds(50, 50, 50, 50);
-        P2GamePiece.setBounds(50, 50, 50, 50);
+        P1GamePiece.setBounds(0, 0, 50, 50);
+        P2GamePiece.setBounds(0, 50, 50, 50);
         
         add(P1GamePiece);
         add(P2GamePiece);
@@ -53,5 +51,12 @@ public class GamePlay extends JPanel{
         public void actionPerformed(ActionEvent e) {
             
         }
+    }
+    
+    public void setPlayer1Color(Color P1Color) {
+        this.P1Color = P1Color;
+    }
+    public void setPlayer2Color(Color P2Color) {
+        this.P2Color = P2Color;
     }
 }

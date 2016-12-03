@@ -10,12 +10,14 @@ public class OptionsController {
     OptionsModel o_model;
     OptionsView o_view;
     MainModel m_model;
+    GamePlay g_play;
     
-    OptionsController(final OptionsModel o_model, final OptionsView o_view, final MainModel m_model)
+    OptionsController(final OptionsModel o_model, final OptionsView o_view, final MainModel m_model, final GamePlay g_play)
     {
         this.o_model = o_model;
         this.o_view = o_view;
         this.m_model = m_model;
+        this.g_play = g_play;
         
         class ButtonListener implements ActionListener {
             public void actionPerformed(ActionEvent e) {
@@ -23,26 +25,32 @@ public class OptionsController {
                 if(clickSource == o_view.redButton) {
                     o_model.setPlayer1Color(Color.RED);
                     m_model.setPlayer1Color(Color.RED);
+                    g_play.setPlayer1Color(Color.RED);
                 }
                 if(clickSource == o_view.orangeButton) {
                     o_model.setPlayer2Color(Color.ORANGE);
                     m_model.setPlayer2Color(Color.ORANGE);
+                    g_play.setPlayer2Color(Color.ORANGE);
                 }
                 if(clickSource == o_view.yellowButton) {
                     o_model.setPlayer1Color(Color.YELLOW);
                     m_model.setPlayer1Color(Color.YELLOW);
+                    g_play.setPlayer1Color(Color.YELLOW);
                 }
                 if(clickSource == o_view.greenButton) {
                     o_model.setPlayer2Color(Color.GREEN);
                     m_model.setPlayer2Color(Color.GREEN);
+                    g_play.setPlayer2Color(Color.GREEN);
                 }
                 if(clickSource == o_view.blueButton) {
                     o_model.setPlayer1Color(Color.BLUE);
                     m_model.setPlayer1Color(Color.BLUE);
+                    g_play.setPlayer1Color(Color.BLUE);
                 }
                 if(clickSource == o_view.magentaButton) {
                     o_model.setPlayer2Color(Color.MAGENTA);
                     m_model.setPlayer2Color(Color.MAGENTA);
+                    g_play.setPlayer2Color(Color.MAGENTA);
                 }
                 if(clickSource == o_view.savePlayer1InfoButton) {
                     o_model.setPlayer1Name(o_view.player1NameField.getText());

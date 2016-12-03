@@ -20,6 +20,8 @@ public class NavController {
     InstructionView i_view;
     CreditsView c_view;
     
+    GamePlay g_play;
+    
     public NavController(NavModel n_model, NavView n_view ) {
         this.n_model = n_model;
         this.n_view = n_view;
@@ -28,9 +30,11 @@ public class NavController {
         m_view = new MainView(m_model);
         m_controller = new MainController(m_model, m_view);
         
+        g_play = new GamePlay();
+        
         o_model = new OptionsModel();        
         o_view = new OptionsView(o_model);
-        o_controller = new OptionsController(o_model, o_view, m_model);
+        o_controller = new OptionsController(o_model, o_view, m_model, g_play);
         
         i_view = new InstructionView();
         
