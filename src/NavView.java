@@ -26,6 +26,7 @@ public class NavView extends JFrame{
     {
         nVpanel.removeSplash();
         nVpanel.removeMain();
+        nVpanel.removeGamePlay();
         nVpanel.removeInstruction();
         nVpanel.removeCredits();
         nVpanel.addOptions(o_view);        
@@ -34,6 +35,7 @@ public class NavView extends JFrame{
     public void switchToMainPanel(MainView m_view)
     {
         nVpanel.removeSplash();
+        nVpanel.removeGamePlay();
         nVpanel.removeOptions();
         nVpanel.removeInstruction();
         nVpanel.removeCredits();
@@ -44,6 +46,7 @@ public class NavView extends JFrame{
     {
         nVpanel.removeSplash();
         nVpanel.removeMain();
+        nVpanel.removeGamePlay();
         nVpanel.removeOptions();
         nVpanel.removeCredits();
         nVpanel.addInstruction(i_view); 
@@ -53,6 +56,7 @@ public class NavView extends JFrame{
     {
         nVpanel.removeSplash();
         nVpanel.removeMain();
+        nVpanel.removeGamePlay();
         nVpanel.removeOptions();
         nVpanel.removeInstruction();
         nVpanel.addCredits(c_view); 
@@ -60,11 +64,11 @@ public class NavView extends JFrame{
     
     public void switchToGamePlayPanel(GamePlay g_play) {
         nVpanel.removeSplash();
-        nVpanel.removeOptions();
         nVpanel.removeMain();
+        nVpanel.removeOptions();
         nVpanel.removeInstruction();
         nVpanel.removeCredits();
-        nVpanel.;
+        nVpanel.addGamePlay(g_play);
     }
     
     public void addOptionsButtonListener(ActionListener al) 
@@ -75,7 +79,11 @@ public class NavView extends JFrame{
     public void addMainButtonListener(ActionListener al) 
     {    
         nVpanel.menu.mainButton.addActionListener(al);
-    }       
+    }
+    
+    public void addStartButtonListener(ActionListener al) {
+        nVpanel.menu.startButton.addActionListener(al);
+    }
     
     public void addInstructionButtonListener(ActionListener al)
     {

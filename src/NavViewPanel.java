@@ -99,9 +99,8 @@ public class NavViewPanel extends JPanel{
     }
     
     public void removeGamePlay() {
-        if (this.g_play != g_play) {
+        if (this.g_play != null)
             remove(this.g_play);
-        }
     }
     
     public void removeSplash()

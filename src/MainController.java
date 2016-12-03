@@ -25,14 +25,10 @@ public class MainController {
                     m_view.player2TempLabel.setText("PLAYER 2 INFO - Name: " + m_model.getPlayer2Name() + " "
                             + "Color: " + m_model.getPlayer2ColorString() + " Level: " + m_model.getlevel());
                 }
-                if(clickSource == m_view.playGame) {
-                    m_view.switchToGamePlayPanel(g_play);
-                }
             }
         }
         m_view.addUpdatePlayer1LabelButtonListener(new ButtonListener());
         m_view.addUpdatePlayer2LabelButtonListener(new ButtonListener());
-        m_view.addPlayGameButtonListener(new ButtonListener());
         
     }
 }

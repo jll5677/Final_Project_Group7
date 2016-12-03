@@ -9,6 +9,7 @@ public class NavViewBottomMenuPanel extends JPanel{
     JButton instructionsButton;
     JButton creditsButton;
     JButton startButton;
+    
     public NavViewBottomMenuPanel() {
         super();       
         mainButton = new JButton("Main");
