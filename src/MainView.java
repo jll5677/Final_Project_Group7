@@ -10,6 +10,7 @@ public class MainView extends JPanel{
     JLabel welcomeLabel;
     JLabel player1TempLabel;
     JLabel player2TempLabel;
+    JButton startGame;
     JButton updatePlayer1Label;
     JButton updatePlayer2Label;
     CreditsView c_view;
@@ -27,12 +28,14 @@ public class MainView extends JPanel{
         setLayout(grid);
         
         welcomeLabel = new JLabel("Welcome to Box Jump!");
+        startGame = new JButton("Start Game");
         player1TempLabel = new JLabel("No info yet.");
         player2TempLabel = new JLabel("No info yet.");
         updatePlayer1Label = new JButton("Show Player 1 Settings");
         updatePlayer2Label = new JButton("Show Player 2 Settings");
         
         add(welcomeLabel);
+        add(startGame);
         add(player1TempLabel);
         add(updatePlayer1Label);
         add(player2TempLabel);
@@ -44,6 +47,9 @@ public class MainView extends JPanel{
     }
     public void addUpdatePlayer2LabelButtonListener(ActionListener alP2Label) {
         updatePlayer2Label.addActionListener(alP2Label);
+    }
+    public void addStartGameButtonListener(ActionListener alSG) {
+        startGame.addActionListener(alSG);
     }
 
 }

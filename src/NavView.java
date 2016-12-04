@@ -80,11 +80,7 @@ public class NavView extends JFrame{
     {    
         nVpanel.menu.mainButton.addActionListener(al);
     }
-    
-    public void addStartButtonListener(ActionListener al) {
-        nVpanel.menu.startButton.addActionListener(al);
-    }
-    
+        
     public void addInstructionButtonListener(ActionListener al)
     {
         nVpanel.menu.instructionsButton.addActionListener(al);
