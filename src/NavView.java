@@ -29,6 +29,7 @@ public class NavView extends JFrame{
         nVpanel.removeGamePlay();
         nVpanel.removeInstruction();
         nVpanel.removeCredits();
+        nVpanel.removeStartGame();
         nVpanel.addOptions(o_view);        
     }
     
@@ -39,6 +40,7 @@ public class NavView extends JFrame{
         nVpanel.removeOptions();
         nVpanel.removeInstruction();
         nVpanel.removeCredits();
+        nVpanel.removeStartGame();
         nVpanel.addMain(m_view);        
     }
     
@@ -49,6 +51,7 @@ public class NavView extends JFrame{
         nVpanel.removeGamePlay();
         nVpanel.removeOptions();
         nVpanel.removeCredits();
+        nVpanel.removeStartGame();
         nVpanel.addInstruction(i_view); 
     }
     
@@ -59,6 +62,7 @@ public class NavView extends JFrame{
         nVpanel.removeGamePlay();
         nVpanel.removeOptions();
         nVpanel.removeInstruction();
+        nVpanel.removeStartGame();
         nVpanel.addCredits(c_view); 
     }
     
@@ -68,7 +72,18 @@ public class NavView extends JFrame{
         nVpanel.removeOptions();
         nVpanel.removeInstruction();
         nVpanel.removeCredits();
+        nVpanel.removeStartGame();
         nVpanel.addGamePlay(g_play);
+    }
+    
+    public void switchToStartGamePanel(Game s_game) {
+        nVpanel.removeSplash();
+        nVpanel.removeMain();
+        nVpanel.removeOptions();
+        nVpanel.removeInstruction();
+        nVpanel.removeCredits();
+        nVpanel.removeGamePlay();
+        nVpanel.addStartGame(s_game);
     }
     
     public void addOptionsButtonListener(ActionListener al) 
@@ -91,6 +106,10 @@ public class NavView extends JFrame{
         nVpanel.menu.creditsButton.addActionListener(al);
     }
     
+    public void addstartButtonListener(ActionListener al)
+    {
+        nVpanel.menu.startButton.addActionListener(al);
+    }
     
     //TODO: Add listeners to switch to other Panels
     

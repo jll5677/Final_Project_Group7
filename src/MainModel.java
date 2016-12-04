@@ -26,7 +26,6 @@ public class MainModel {
     public void setLevel(int level) {
         this.level = level;
     }
-    
     public String getPlayer1Name() {
         return player1Name;
     }

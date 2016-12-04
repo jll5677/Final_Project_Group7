@@ -19,7 +19,7 @@ public class NavController {
     MainController m_controller;
     InstructionView i_view;
     CreditsView c_view;
-    
+    Game s_game;
     GamePlay g_play;
     
     public NavController(NavModel n_model, NavView n_view ) {
@@ -37,13 +37,14 @@ public class NavController {
         o_controller = new OptionsController(o_model, o_view, m_model, g_play);
         
         i_view = new InstructionView();
-        
+        s_game = new Game();
         c_view = new CreditsView();
                 
         n_view.addOptionsButtonListener(new OptionsButtonListener());
         n_view.addMainButtonListener(new MainButtonListener()); 
         n_view.addInstructionButtonListener(new InstructionButtonListener());
         n_view.addCreditsButtonListener(new CreditsButtonListener());
+        n_view.addstartButtonListener(new StartButtonListener());
         
     }
     class OptionsButtonListener implements ActionListener {            
@@ -72,6 +73,12 @@ public class NavController {
         public void actionPerformed(ActionEvent e)
         {
             n_view.switchToCreditsPanel(c_view);
+        }
+    }
+    class StartButtonListener implements ActionListener {
+        public void actionPerformed(ActionEvent e)
+        {
+            n_view.switchToStartGamePanel(s_game);
         }
     }
 }
