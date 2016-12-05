@@ -27,4 +27,31 @@ public class OptionsModel {
     public int getPlayerSize() {
         return this.playerSize;
     }
+    
+    public String getPlayerColorString() {
+        String PCString = "";
+        if(playerColor == Color.RED) {
+            PCString = "Red";
+        }
+        if(playerColor == Color.BLUE) {
+            PCString = "Blue";
+        }
+        if(playerColor == Color.GREEN) {
+            PCString = "Green";
+        }
+        return PCString;
+    }
+    public String getBackgroundColorString() {
+        String BCString = "";
+        if(backgroundColor == Color.BLACK) {
+            BCString = "Black";
+        }
+        if(playerColor == Color.GRAY) {
+            BCString = "Gray";
+        }
+        if(playerColor == Color.CYAN) {
+            BCString = "Cyan";
+        }
+        return BCString;
+    }
 }

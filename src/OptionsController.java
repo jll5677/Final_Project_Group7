@@ -32,17 +32,43 @@ public class OptionsController {
                     o_model.setPlayerColor(Color.BLUE);
                     //m_model.setPlayer1Color(Color.BLUE);
                 }
+                if(clickSource == o_view.blackButton) {
+                    o_model.setBackgroundColor(Color.BLACK);
+                }
+                if(clickSource == o_view.grayButton) {
+                    o_model.setBackgroundColor(Color.GRAY);
+                }
+                if(clickSource == o_view.cyanButton) {
+                    o_model.setBackgroundColor(Color.CYAN);
+                }
                 if(clickSource == o_view.savePlayerInfoButton) {
-                    o_model.setPlayerSize(o_view.playerSizeSlider.getValue());
+                    if(o_view.playerSizeSlider.getValue() == 0) {
+                        o_model.setPlayerSize(32);
+                    }
+                    if(o_view.playerSizeSlider.getValue() == 1) {
+                        o_model.setPlayerSize(37);
+                    }
+                    if(o_view.playerSizeSlider.getValue() == 2) {
+                        o_model.setPlayerSize(42);
+                    }
+                    if(o_view.playerSizeSlider.getValue() == 3) {
+                        o_model.setPlayerSize(47);
+                    }
                 }
                 if(clickSource == o_view.showPlayerInfoButton) {
                     o_view.playerInfoLabel.setText("Challenger is ready to play!");
+                    o_view.playerColorLabel.setText("USER COLOR: " + o_model.getPlayerColorString());
+                    o_view.backgroundColorLabel.setText("BACKGROUND COLOR: " + o_model.getBackgroundColorString());
+                    o_view.playerSizeLabel.setText("PLAYER SIZE: " + o_model.getPlayerSize());
                 }
             }
         }
         o_view.addRedButtonListener(new ButtonListener());
         o_view.addGreenButtonListener(new ButtonListener());
         o_view.addBlueButtonListener(new ButtonListener());
+        o_view.addBlackButtonListener(new ButtonListener());
+        o_view.addGrayButtonListener(new ButtonListener());
+        o_view.addCyanButtonListener(new ButtonListener());
         o_view.addSavePlayerInfoButtonListener(new ButtonListener());
         o_view.addShowPlayerInfoButtonListener(new ButtonListener());
     }
