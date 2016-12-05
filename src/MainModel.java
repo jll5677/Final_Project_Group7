@@ -2,73 +2,55 @@
 import java.awt.Color;
 
 public class MainModel {
-    private String player1Name;
-    private String player2Name;
-    private Color player1Color;
-    private Color player2Color;
-    private String player1ColorString;
-    private String player2ColorString;
-    private int level;
+    private Color playerColor;
+    private Color backgroundColor;
+    private int playerSize;
     
     MainModel(){}
-    public void setPlayer1Name(String player1Name) {
-        this.player1Name = player1Name;
+    public void setPlayerColor(Color playerColor) {
+        this.playerColor = playerColor;
     }
-    public void setPlayer2Name(String player2Name) {
-        this.player2Name = player2Name;
+    public void setBackgroundColor(Color backgroundColor) {
+        this.backgroundColor = backgroundColor;
     }
-    public void setPlayer1Color(Color player1Color) {
-        this.player1Color = player1Color;
+    public void setPlayerSize(int playerSize) {
+        this.playerSize = playerSize;
     }
-    public void setPlayer2Color(Color player2Color) {
-        this.player2Color = player2Color;
+    
+    public Color getPlayerColor() {
+        return this.playerColor;
     }
-    public void setLevel(int level) {
-        this.level = level;
+    public Color getBackgroundColor() {
+        return this.backgroundColor;
     }
-    public String getPlayer1Name() {
-        return player1Name;
+    public int getPlayerSize() {
+        return this.playerSize;
     }
-    public String getPlayer2Name() {
-        return player2Name;
-    }
-    public Color getPlayer1Color() {
-        return player1Color;
-    }
-    public Color getPlayer2Color() {
-        return player2Color;
-    }
-    public int getlevel() {
-        return level;
-    }
-    public String getPlayer1ColorString() {
-        Color color = getPlayer1Color();
-        
-        if(color == Color.RED) {
-            player1ColorString = "Red";
+    
+    public String getPlayerColorString() {
+        String PCString = "";
+        if(playerColor == Color.RED) {
+            PCString = "Red";
         }
-        if(color == Color.YELLOW) {
-            player1ColorString = "Yellow";
+        if(playerColor == Color.BLUE) {
+            PCString = "Blue";
         }
-        if(color == Color.BLUE) {
-            player1ColorString = "Blue";
+        if(playerColor == Color.GREEN) {
+            PCString = "Green";
         }
-        
-        return player1ColorString;
+        return PCString;
     }
-    public String getPlayer2ColorString() {
-        Color color = getPlayer2Color();
-        
-        if(color == Color.ORANGE) {
-            player2ColorString = "Orange";
+    public String getBackgroundColorString() {
+        String BCString = "";
+        if(backgroundColor == Color.BLACK) {
+            BCString = "Black";
         }
-        if(color == Color.GREEN) {
-            player2ColorString = "Green";
+        if(playerColor == Color.GRAY) {
+            BCString = "Gray";
         }
-        if(color == Color.MAGENTA) {
-            player2ColorString = "Magenta";
+        if(playerColor == Color.CYAN) {
+            BCString = "Cyan";
         }
-        
-        return player2ColorString;
+        return BCString;
     }
 }

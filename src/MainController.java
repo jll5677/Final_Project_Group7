@@ -1,7 +1,7 @@
 
-import java.awt.event.ActionEvent;
+/*import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
+import javax.swing.JButton;*/
 
 public class MainController {
     MainModel m_model;
@@ -12,7 +12,7 @@ public class MainController {
         this.m_model = m_model;
         this.m_view = m_view;
       
-       class ButtonListener implements ActionListener {
+       /*class ButtonListener implements ActionListener {
             public void actionPerformed(ActionEvent e) {
                 JButton clickSource = (JButton)e.getSource();
                 if(clickSource == m_view.updatePlayer1Label) {
@@ -26,6 +26,6 @@ public class MainController {
             }
         }
         m_view.addUpdatePlayer1LabelButtonListener(new ButtonListener());
-        m_view.addUpdatePlayer2LabelButtonListener(new ButtonListener());
+        m_view.addUpdatePlayer2LabelButtonListener(new ButtonListener());*/
     }
 }
