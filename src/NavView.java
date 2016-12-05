@@ -2,8 +2,6 @@
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
-
-
 public class NavView extends JFrame{
     
     NavModel model;
@@ -22,21 +20,17 @@ public class NavView extends JFrame{
         add(nVpanel);    
     }
     
-    public void switchToOptionsPanel(OptionsView o_view)
-    {
+    public void switchToOptionsPanel(OptionsView o_view) {
         nVpanel.removeSplash();
         nVpanel.removeMain();
-        nVpanel.removeGamePlay();
         nVpanel.removeInstruction();
         nVpanel.removeCredits();
         nVpanel.removeStartGame();
         nVpanel.addOptions(o_view);        
     }
     
-    public void switchToMainPanel(MainView m_view)
-    {
+    public void switchToMainPanel(MainView m_view) {
         nVpanel.removeSplash();
-        nVpanel.removeGamePlay();
         nVpanel.removeOptions();
         nVpanel.removeInstruction();
         nVpanel.removeCredits();
@@ -44,36 +38,22 @@ public class NavView extends JFrame{
         nVpanel.addMain(m_view);        
     }
     
-    public void switchToInstructionPanel(InstructionView i_view)
-    {
+    public void switchToInstructionPanel(InstructionView i_view) {
         nVpanel.removeSplash();
         nVpanel.removeMain();
-        nVpanel.removeGamePlay();
         nVpanel.removeOptions();
         nVpanel.removeCredits();
         nVpanel.removeStartGame();
         nVpanel.addInstruction(i_view); 
     }
     
-    public void switchToCreditsPanel(CreditsView c_view)
-    {
+    public void switchToCreditsPanel(CreditsView c_view) {
         nVpanel.removeSplash();
         nVpanel.removeMain();
-        nVpanel.removeGamePlay();
         nVpanel.removeOptions();
         nVpanel.removeInstruction();
         nVpanel.removeStartGame();
         nVpanel.addCredits(c_view); 
-    }
-    
-    public void switchToGamePlayPanel(GamePlay g_play) {
-        nVpanel.removeSplash();
-        nVpanel.removeMain();
-        nVpanel.removeOptions();
-        nVpanel.removeInstruction();
-        nVpanel.removeCredits();
-        nVpanel.removeStartGame();
-        nVpanel.addGamePlay(g_play);
     }
     
     public void switchToStartGamePanel(Game s_game) {
@@ -82,32 +62,26 @@ public class NavView extends JFrame{
         nVpanel.removeOptions();
         nVpanel.removeInstruction();
         nVpanel.removeCredits();
-        nVpanel.removeGamePlay();
         nVpanel.addStartGame(s_game);
     }
     
-    public void addOptionsButtonListener(ActionListener al) 
-    {    
+    public void addOptionsButtonListener(ActionListener al) {    
         nVpanel.menu.optionsButton.addActionListener(al);
     }    
                     
-    public void addMainButtonListener(ActionListener al) 
-    {    
+    public void addMainButtonListener(ActionListener al) {    
         nVpanel.menu.mainButton.addActionListener(al);
     }
         
-    public void addInstructionButtonListener(ActionListener al)
-    {
+    public void addInstructionButtonListener(ActionListener al) {
         nVpanel.menu.instructionsButton.addActionListener(al);
     }
     
-    public void addCreditsButtonListener(ActionListener al)
-    {
+    public void addCreditsButtonListener(ActionListener al) {
         nVpanel.menu.creditsButton.addActionListener(al);
     }
     
-    public void addstartButtonListener(ActionListener al)
-    {
+    public void addstartButtonListener(ActionListener al) {
         nVpanel.menu.startButton.addActionListener(al);
     }
     

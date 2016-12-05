@@ -7,12 +7,10 @@ public class MainController {
     MainModel m_model;
     MainView m_view;
     OptionsModel o_model;
-    GamePlay g_play;
     
     MainController(final MainModel m_model, final MainView m_view) {
         this.m_model = m_model;
         this.m_view = m_view;
-        g_play = new GamePlay();
       
        class ButtonListener implements ActionListener {
             public void actionPerformed(ActionEvent e) {
@@ -26,9 +24,6 @@ public class MainController {
                             + "Color: " + m_model.getPlayer2ColorString() + " Level: " + m_model.getlevel());
                 }
                 if(clickSource == m_view.startGame) {
-                    NavModel n_model = new NavModel();
-                    NavView n_view = new NavView(n_model);
-                    n_view.switchToGamePlayPanel(g_play);
                 }
             }
         }

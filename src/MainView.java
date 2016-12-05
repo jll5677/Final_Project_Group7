@@ -1,4 +1,3 @@
-import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -13,11 +12,6 @@ public class MainView extends JPanel{
     JButton startGame;
     JButton updatePlayer1Label;
     JButton updatePlayer2Label;
-    CreditsView c_view;
-    InstructionView i_view;
-    OptionsView o_view;
-    MainView m_view;
-    GamePlay g_play;
     MainModel m_model;
     
     MainView(final MainModel m_model)
