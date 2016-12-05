@@ -33,8 +33,9 @@ public class NavController {
         o_controller = new OptionsController(o_model, o_view, m_model);
         
         i_view = new InstructionView();
-        s_game = new Game();
         c_view = new CreditsView();
+        
+        s_game = new Game();
                 
         n_view.addOptionsButtonListener(new OptionsButtonListener());
         n_view.addMainButtonListener(new MainButtonListener()); 
@@ -43,28 +44,33 @@ public class NavController {
         n_view.addstartButtonListener(new StartButtonListener());
     }
     class OptionsButtonListener implements ActionListener {            
+        @Override
         public void actionPerformed(ActionEvent e) {            
             n_view.switchToOptionsPanel(o_view);
         }
     }     
  
     class MainButtonListener implements ActionListener {            
+        @Override
         public void actionPerformed(ActionEvent e) {            
             n_view.switchToMainPanel(m_view);
         }
     }
     
     class InstructionButtonListener implements ActionListener {
+        @Override
         public void actionPerformed(ActionEvent e) {
             n_view.switchToInstructionPanel(i_view);
         }         
     }
     class CreditsButtonListener implements ActionListener {
+        @Override
         public void actionPerformed(ActionEvent e) {
             n_view.switchToCreditsPanel(c_view);
         }
     }
     class StartButtonListener implements ActionListener {
+        @Override
         public void actionPerformed(ActionEvent e) {
             n_view.switchToStartGamePanel(s_game);
         }

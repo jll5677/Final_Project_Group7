@@ -1,4 +1,3 @@
-
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
@@ -9,7 +8,7 @@ public class NavView extends JFrame{
     
     NavView(NavModel model)
     {
-        super("Primary View");
+        super("Box Jump");
         this.model = model;
                           
         setSize(700, 500);
