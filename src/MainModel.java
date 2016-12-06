@@ -45,10 +45,10 @@ public class MainModel {
         if(backgroundColor == Color.BLACK) {
             BCString = "Black";
         }
-        if(playerColor == Color.GRAY) {
+        if(backgroundColor == Color.GRAY) {
             BCString = "Gray";
         }
-        if(playerColor == Color.CYAN) {
+        if(backgroundColor == Color.CYAN) {
             BCString = "Cyan";
         }
         return BCString;
