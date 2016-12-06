@@ -18,7 +18,7 @@ public class NavController {
     
     CreditsView c_view;
     
-    Game s_game;
+    GamePanel g_panel;
     
     public NavController(NavModel n_model, NavView n_view ) {
         this.n_model = n_model;
@@ -35,7 +35,7 @@ public class NavController {
         i_view = new InstructionView();
         c_view = new CreditsView();
         
-        s_game = new Game();
+        g_panel = new GamePanel();
                 
         n_view.addOptionsButtonListener(new OptionsButtonListener());
         n_view.addMainButtonListener(new MainButtonListener()); 
@@ -72,7 +72,7 @@ public class NavController {
     class StartButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            n_view.switchToStartGamePanel(s_game);
+            n_view.switchToStartGamePanel(g_panel);
         }
     }
 }

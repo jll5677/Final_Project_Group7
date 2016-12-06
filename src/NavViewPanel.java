@@ -10,7 +10,7 @@ public class NavViewPanel extends JPanel{
     MainView m_view;
     InstructionView i_view;
     CreditsView c_view;
-    Game s_game;
+    GamePanel g_panel;
     
     public NavViewPanel() {
         super();
@@ -23,9 +23,9 @@ public class NavViewPanel extends JPanel{
     }
     
     //Note: Splash scrren is only shown on startup.  No need to navigate back to it.
-    public void addStartGame(Game s_game) {
-        this.s_game = s_game;
-        add(s_game, BorderLayout.CENTER);
+    public void addStartGame(GamePanel g_panel) {
+        this.g_panel = g_panel;
+        add(g_panel, BorderLayout.CENTER);
         revalidate();
         repaint();
     }
@@ -86,8 +86,8 @@ public class NavViewPanel extends JPanel{
     }
     
     public void removeStartGame(){
-        if (this.s_game != null)
-            remove(this.s_game);
+        if (this.g_panel != null)
+            remove(this.g_panel);
     }
     
     public void removeSplash() {
