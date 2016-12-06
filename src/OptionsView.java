@@ -17,8 +17,7 @@ public class OptionsView extends JPanel{
     JButton blackButton;
     JButton grayButton;
     JButton cyanButton;
-    JLabel playerSizeInstructions_1;
-    JLabel playerSizeInstructions_2;
+    JLabel playerSizeInstructions;
     JSlider playerSizeSlider;
     JButton savePlayerInfoButton;
     JButton showPlayerInfoButton;
@@ -52,8 +51,7 @@ public class OptionsView extends JPanel{
         cyanButton = new JButton("Cyan");
         cyanButton.setBackground(Color.CYAN);
         
-        playerSizeInstructions_1 = new JLabel("Select the size of your sprite.");
-        playerSizeInstructions_2 = new JLabel("This number is then multiplied by 5 and added to 32");
+        playerSizeInstructions = new JLabel("Select the size of your sprite.  This number is then multiplied by 5 and added to 32.");
            
         playerSizeSlider = new JSlider(JSlider.HORIZONTAL, 0, 3, 1);
         playerSizeSlider.setMajorTickSpacing(1);
@@ -80,8 +78,7 @@ public class OptionsView extends JPanel{
         add(blackButton);
         add(grayButton);
         add(cyanButton);
-        add(playerSizeInstructions_1);
-        add(playerSizeInstructions_2);
+        add(playerSizeInstructions);
         add(playerSizeSlider);
         add(savePlayerInfoButton);
         add(showPlayerInfoButton);
