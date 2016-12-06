@@ -7,10 +7,8 @@ import javax.swing.JPanel;
 
 public class MainView extends JPanel{
     JLabel welcomeLabel;
-    JLabel player1TempLabel;
-    JLabel player2TempLabel;
-    JButton updatePlayer1Label;
-    JButton updatePlayer2Label;
+    JLabel playerLabel;
+    JButton updatePlayerLabel;
     MainModel m_model;
     
     MainView(final MainModel m_model)
@@ -21,23 +19,15 @@ public class MainView extends JPanel{
         setLayout(grid);
         
         welcomeLabel = new JLabel("Welcome to Box Jump!");
-        player1TempLabel = new JLabel("No info yet.");
-        player2TempLabel = new JLabel("No info yet.");
-        updatePlayer1Label = new JButton("Show Player 1 Settings");
-        updatePlayer2Label = new JButton("Show Player 2 Settings");
+        playerLabel = new JLabel("No info yet.");
+        updatePlayerLabel = new JButton("Show Player Settings");
         
         add(welcomeLabel);
-        add(player1TempLabel);
-        add(updatePlayer1Label);
-        add(player2TempLabel);
-        add(updatePlayer2Label);
+        add(playerLabel);
+        add(updatePlayerLabel);
     }
     
-    public void addUpdatePlayer1LabelButtonListener(ActionListener alP1Label) {
-        updatePlayer1Label.addActionListener(alP1Label);
+    public void addUpdatePlayerLabelButtonListener(ActionListener alP1Label) {
+        updatePlayerLabel.addActionListener(alP1Label);
     }
-    public void addUpdatePlayer2LabelButtonListener(ActionListener alP2Label) {
-        updatePlayer2Label.addActionListener(alP2Label);
-    }
-
 }

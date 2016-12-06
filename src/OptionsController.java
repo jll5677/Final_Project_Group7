@@ -22,37 +22,44 @@ public class OptionsController {
                 JButton clickSource = (JButton)e.getSource();
                 if(clickSource == o_view.redButton) {
                     o_model.setPlayerColor(Color.RED);
-                    //m_model.setPlayer1Color(Color.RED);
+                    m_model.setPlayerColor(Color.RED);
                 }
                 if(clickSource == o_view.greenButton) {
                     o_model.setPlayerColor(Color.GREEN);
-                    //m_model.setPlayer2Color(Color.GREEN);
+                    m_model.setPlayerColor(Color.GREEN);
                 }
                 if(clickSource == o_view.blueButton) {
                     o_model.setPlayerColor(Color.BLUE);
-                    //m_model.setPlayer1Color(Color.BLUE);
+                    m_model.setPlayerColor(Color.BLUE);
                 }
                 if(clickSource == o_view.blackButton) {
                     o_model.setBackgroundColor(Color.BLACK);
+                    m_model.setBackgroundColor(Color.BLACK);
                 }
                 if(clickSource == o_view.grayButton) {
                     o_model.setBackgroundColor(Color.GRAY);
+                    m_model.setBackgroundColor(Color.GRAY);
                 }
                 if(clickSource == o_view.cyanButton) {
                     o_model.setBackgroundColor(Color.CYAN);
+                    m_model.setBackgroundColor(Color.CYAN);
                 }
                 if(clickSource == o_view.savePlayerInfoButton) {
                     if(o_view.playerSizeSlider.getValue() == 0) {
                         o_model.setPlayerSize(32);
+                        m_model.setPlayerSize(32);
                     }
                     if(o_view.playerSizeSlider.getValue() == 1) {
                         o_model.setPlayerSize(37);
+                        m_model.setPlayerSize(37);
                     }
                     if(o_view.playerSizeSlider.getValue() == 2) {
                         o_model.setPlayerSize(42);
+                        m_model.setPlayerSize(42);
                     }
                     if(o_view.playerSizeSlider.getValue() == 3) {
                         o_model.setPlayerSize(47);
+                        m_model.setPlayerSize(47);
                     }
                 }
                 if(clickSource == o_view.showPlayerInfoButton) {
